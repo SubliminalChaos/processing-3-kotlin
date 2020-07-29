@@ -10,8 +10,11 @@ class UsingProcessing2 : PApplet() {
 
     // identical use to draw in Prcessing IDE
     override fun draw() {
+        circleX = random(width.toFloat())
+        circleY = random(height.toFloat())
+
         background(50) // repaint the background every time
-        ellipse(circleX, 180f, 24f, 24f)
+        ellipse(circleX, circleY, 24f, 24f)
 
         circleX += 1
      //   println(displayWidth)
@@ -21,8 +24,8 @@ class UsingProcessing2 : PApplet() {
     // method for setting the size of the window
     override fun settings() {
         size(640, 360)
-        circleX = width.toFloat() / 2// With need to be AFTER size() to work, W/2 center of screen
-        println(circleX)
+
+
     }
 
     // identical use to setup in Processing IDE except for size()
