@@ -6,7 +6,7 @@ fun main() {
 
 class UsingProcessing2 : PApplet() {
     var circleX:Float = 0f
-
+    var circleY:Float = 0f
 
     // identical use to draw in Prcessing IDE
     override fun draw() {
@@ -21,7 +21,7 @@ class UsingProcessing2 : PApplet() {
     // method for setting the size of the window
     override fun settings() {
         size(640, 360)
-        circleX = random(0f, width.toFloat())// With need to be AFTER size() to work
+        circleX = width.toFloat() / 2// With need to be AFTER size() to work, W/2 center of screen
         println(circleX)
     }
 
@@ -29,8 +29,5 @@ class UsingProcessing2 : PApplet() {
     override fun setup() {
 
     }
-
-
-
 
 }
