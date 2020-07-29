@@ -5,17 +5,8 @@ fun main() {
 }
 
 class UsingProcessing2 : PApplet() {
-    var circleX:Float = 50.0f
+    var circleX:Float = 0f
 
-    // method for setting the size of the window
-    override fun settings() {
-        size(640, 360)
-    }
-
-    // identical use to setup in Processing IDE except for size()
-    override fun setup() {
-
-    }
 
     // identical use to draw in Prcessing IDE
     override fun draw() {
@@ -23,8 +14,23 @@ class UsingProcessing2 : PApplet() {
         ellipse(circleX, 180f, 24f, 24f)
 
         circleX += 1
+     //   println(displayWidth)
 
     }
+
+    // method for setting the size of the window
+    override fun settings() {
+        size(640, 360)
+        circleX = random(0f, width.toFloat())// With need to be AFTER size() to work
+        println(circleX)
+    }
+
+    // identical use to setup in Processing IDE except for size()
+    override fun setup() {
+
+    }
+
+
 
 
 }
