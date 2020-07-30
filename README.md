@@ -2,10 +2,10 @@
 Testing Processing3 with Kotlin
 
 
-# Execute the main function in Class UsingProcessing2.kt
+# To Run Execute the main function in Class UsingProcessing.kt
 
 ```
 fun main() {
-    PApplet.main("UsingProcessing2")
+    PApplet.main("UsingProcessing")
 }
 ```
